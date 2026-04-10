@@ -1,0 +1,26 @@
+{
+  "PQJOF34": {
+    "name": "Artemis SWG Traffic Acquisition Production Service",
+    "team": "RouteX"
+  },
+  "PZ2VH4U": {
+    "name": "Athena MPS Production Service",
+    "team": "Data Plane (Athena)"
+  },
+  "PB7YIB6": {
+    "name": "Atlantis - China Environment - Production",
+    "team": "SWG Control Plane (Atlantis)"
+  },
+  "P7VLSUG": {
+    "name": "Atlantis - Production Critical",
+    "team": "SWG Control Plane (Atlantis)"
+  },
+  "PXSWYNF": {
+    "name": "Athena Proxy Production Service",
+    "team": "Data Plane (Athena)"
+  },
+  "PNON446": {
+    "name": "NAT as a Service",
+    "team": "RouteX"
+  }
+}
