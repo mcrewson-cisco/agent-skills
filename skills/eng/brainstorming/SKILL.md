@@ -79,12 +79,16 @@ digraph brainstorming {
 **Understanding the idea:**
 
 - Check out the current project state first (files, docs, recent commits)
+- Before asking the next question, ask whether the answer is already discoverable from the project context. If yes, inspect the codebase or docs instead of asking the user.
 - Before asking detailed questions, assess scope: if the request describes multiple independent subsystems (e.g., "build a platform with chat, file storage, billing, and analytics"), flag this immediately. Don't spend questions refining details of a project that needs to be decomposed first.
 - If the project is too large for a single spec, help the user decompose into sub-projects: what are the independent pieces, how do they relate, what order should they be built? Then brainstorm the first sub-project through the normal design flow. Each sub-project gets its own spec → plan → implementation cycle.
 - For appropriately-scoped projects, ask questions one at a time to refine the idea
+- Treat the interview as a decision tree. Identify the single most important unresolved branch, ask the one question that unlocks it, and resolve dependencies before moving sideways.
 - Prefer multiple choice questions when possible, but open-ended is fine too
 - Only one question per message - if a topic needs more exploration, break it into multiple questions
+- When you have enough context to form a view, include a recommended default answer with the question and brief reasoning so the user can react, confirm, or correct it
 - Focus on understanding: purpose, constraints, success criteria
+- If the user's answers conflict or leave an important dependency unresolved, stop and drill into that branch before proceeding
 
 **Exploring approaches:**
 
@@ -147,6 +151,9 @@ Wait for the user's response. If they request changes, make them and re-run the 
 
 - **One question at a time** - Don't overwhelm with multiple questions
 - **Multiple choice preferred** - Easier to answer than open-ended when possible
+- **Recommend, don't just interrogate** - When possible, give the user a sensible default answer to react to
+- **Resolve the decision tree** - Follow dependencies branch-by-branch instead of hopping across unrelated topics
+- **Don't ask what you can inspect** - Use the codebase, docs, and recent history to answer factual questions first
 - **YAGNI ruthlessly** - Remove unnecessary features from all designs
 - **Explore alternatives** - Always propose 2-3 approaches before settling
 - **Incremental validation** - Present design, get approval before moving on
